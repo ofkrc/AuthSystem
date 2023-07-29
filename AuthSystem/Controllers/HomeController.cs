@@ -1,4 +1,5 @@
 ﻿using AuthSystem.Areas.Identity.Data;
+using AuthSystem.Data;
 using AuthSystem.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -14,18 +15,17 @@ namespace AuthSystem.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly UserManager<ApplicationUser> _userManager;
-
-        public HomeController(ILogger<HomeController> logger, UserManager<ApplicationUser> userManager)
+        private readonly AuthDbContext _dbContext;
+        public HomeController(ILogger<HomeController> logger, UserManager<ApplicationUser> userManager, AuthDbContext dbContext)
         {
             _logger = logger;
             this._userManager = userManager;
+             _dbContext = dbContext;
         }
 
         public IActionResult Index()
         {
-            ViewData["UserID"] = _userManager.GetUserId(this.User);
-            ViewData["FirstName"] = _userManager.GetUserName(this.User);
-            return View();
+            return RedirectToAction("Index", "User");
         }
         //public IActionResult Index()
         //{

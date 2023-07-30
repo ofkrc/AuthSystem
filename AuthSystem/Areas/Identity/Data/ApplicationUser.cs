@@ -34,6 +34,10 @@ public class ApplicationUser : IdentityUser
     [Column(TypeName = "nvarchar(1000)")]
     public string About { get; set; }
 
+    [PersonalData]
+    [Column(TypeName = "nvarchar(100)")]
+    public string Job { get; set; }
+
 
 }
 

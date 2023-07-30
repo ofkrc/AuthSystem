@@ -26,28 +26,7 @@ namespace AuthSystem.Controllers
         public IActionResult Index()
         {
             return RedirectToAction("Index", "User");
-        }
-        //public IActionResult Index()
-        //{
-        //    string Id = _userManager.GetUserId(this.User);
-        //    var list = GetFirstName(Id);
-        //    return View();
-        //}
-
-        //public UserModel GetFirstName(string id)
-        //{
-
-        //    UserModel userModel = new UserModel();
-        //    var list = userModel.Users.Find(x => x.Id == id);
-
-        //    userModel.UserName = list.UserName;
-        //    userModel.FirstName = list.FirstName;
-        //    userModel.Email = list.Email;
-        //    userModel.LastName = list.LastName;
-        //    userModel.PhoneNumber = list.PhoneNumber;
-
-        //    return userModel;
-        //}
+        }    
 
         public IActionResult Privacy()
         {

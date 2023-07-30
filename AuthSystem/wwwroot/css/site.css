@@ -45,3 +45,24 @@ body {
 .login-logout-card .card-body {
     padding: 10px 20px;
 }
+
+
+/* Sayfayý tamamen kaplayacak þekilde background gradient ayarý */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ekraný kaplayacak arka plan gradienti */
+body {
+  background: #fbc2eb;
+  background: -webkit-linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1));
+  background: linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1));
+}
+
+/* .gradient-custom-2 sýnýfýnýn yüksekliðini deðiþtirelim (isteðe baðlý) */
+.gradient-custom-2 {
+  height: 100vh; /* 100 viewport height yani ekran yüksekliði kadar ayarlayacak */
+}
+
